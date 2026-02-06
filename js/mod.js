@@ -129,7 +129,7 @@ function getPointGen() {
 	let gain = EN(1)
     if (hasUpgrade("jac", 102)) gain = gain.mul(upgradeEffect("jac", 102))
     if (hasUpgrade("jac", 103)) gain = gain.pow(upgradeEffect("jac", 103))
-	if (hasUpgrade("jac", 223)) gain = gain.mul(buyableEffect("jac", 111)).mul(buyableEffect("jac", 112))
+	if (hasUpgrade("jac", 223)) gain = gain.pow(buyableEffect("jac", 111)).pow(buyableEffect("jac", 112))
 	gain = gain.mul(buyableEffect("jac", 101))
 	gain = gain.mul(buyableEffect("jac", 121))
 	gain = gain.mul(buyableEffect("jac", 123).ppp)
