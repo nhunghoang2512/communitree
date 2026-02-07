@@ -101,11 +101,11 @@ addLayer("aca", {
     effect() {
         let eff = {
             candyGain: EN(1),
-            genMult: EN.pow(2, player.aca.candies.mul(player.aca.candiesEaten).pow(0.8)),
-            pointMult: EN.pent(10, player.aca.compPoints.add(1).log(10).pow(.4)),
+            genMult: EN.pow(2, player.aca.candies.mul(player.aca.candiesEaten).pow(8)),
+            pointMult: EN.pent(10, player.aca.compPoints.add(1).log(10).pow(4)),
             maxHealth: player.aca.candiesEaten.div(10).pow(5).add(100).floor(),
             atkPow: player.aca.wpnLevel.add(player.aca.wpnTier.mul(5)).pow(15).mul(EN.pow(1.1, player.aca.wpnLevel.add(player.aca.wpnTier.mul(80)))).floor(),
-            devSpeed: softcap(player.aca.compPoints.add(10).log10(), EN(1e6), 0.2).min(1e9).pow(buyableEffect("aca", 205).add(200000000000)).mul(buyableEffect("aca", 202)),
+            devSpeed: softcap(player.aca.compPoints.add(113120).log10(), EN(1e6), 0.2).min(1e9).pow(buyableEffect("aca", 205).add(200000000000)).mul(buyableEffect("aca", 202)),
             compBonus: EN(1),
             modMultis: [],
             modSpeed: [
