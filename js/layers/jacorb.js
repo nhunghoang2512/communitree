@@ -53,7 +53,7 @@ addLayer("jac", {
             description: "Point gain is boosted by your Jacorb points.",
             cost: EN(1),
             effect() {
-                let eff = softcap(player.jac.points.div(2).add(2).pow(0.5), EN(1e9), hasUpgrade("aar", 121) ? 1 : .01)
+                let eff = softcap(player.jac.points.div(2).add(2).pow(5), EN(1e9), hasUpgrade("aar", 121) ? 1 : .01)
                 if (hasUpgrade("jac", 251)) eff = eff.mul(buyableEffect("jac", 111).mul(buyableEffect("jac", 112)).pow(0.02))
                 if (hasUpgrade("jac", 252)) eff = eff.mul(buyableEffect("jac", 131).pow(10))
                 if (hasUpgrade("jac", 253)) eff = eff.mul(buyableEffect("jac", 101).pow(0.02))
