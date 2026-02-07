@@ -178,7 +178,7 @@ addLayer("aca", {
                 if (hasUpgrade("aca", 102)) time = time.mul(upgradeEffect("aca", 102))
                 if (hasUpgrade("aca", 111)) time = time.mul(upgradeEffect("aca", 111))
                 if (hasUpgrade("aca", 121)) time = time.pow(upgradeEffect("aca", 121))
-                return EN.tetr(10, time.add(1).pow(0.4), time)
+                return EN.tetr(10, time.add(1))
             },
             effectDisplay() { return "^" + format(this.effect()) },
             unlocked() { return player.aca.best.gte(1) },
