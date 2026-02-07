@@ -53,12 +53,12 @@ addLayer("jac", {
             description: "Point gain is boosted by your Jacorb points.",
             cost: EN(1),
             effect() {
-                let eff = softcap(player.jac.points.div(2).add(2).pow(5), EN(1e900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000), hasUpgrade("aar", 121) ? 1 : .01)
+                let eff = softcap(player.jac.points.div(2).add(2).pow(50), EN(1e900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000), hasUpgrade("aar", 121) ? 1 : .01)
                 if (hasUpgrade("jac", 251)) eff = eff.mul(buyableEffect("jac", 111).mul(buyableEffect("jac", 112)).pow(0.02))
                 if (hasUpgrade("jac", 252)) eff = eff.mul(buyableEffect("jac", 131).pow(10))
                 if (hasUpgrade("jac", 253)) eff = eff.mul(buyableEffect("jac", 101).pow(0.02))
                 if (hasUpgrade("jac", 254)) eff = eff.mul(buyableEffect("jac", 122).pp ? buyableEffect("jac", 122).pp.pow(0.1) : 1)
-                return softcap(eff, EN("e40000"), hasUpgrade("aar", 121) ? 1 : 0.1).min("e1000000")
+                return softcap(eff, EN("e402344444444444444444444444444444444444444000"), hasUpgrade("aar", 121) ? 1 : 0.1).min("e100023444444444444444444444444444444000")
             },
             effectDisplay() { return "×" + format(this.effect()) },
             unlocked() { return hasUpgrade("jac", 101) },
@@ -68,12 +68,12 @@ addLayer("jac", {
             description: "Point gain is boosted by your points.",
             cost: EN(3),
             effect() {
-                let eff = softcap(player.points.div(5).add(2).pow(4), EN(1e9), hasUpgrade("aar", 122) ? 1 : .01)
+                let eff = softcap(player.points.div(5).add(2).pow(234), EN(1e9234234234234234234234234234234234234234234234234234234234234234234234234234234234234234234234234234234234234234234234234234234234234234234234234), hasUpgrade("aar", 122) ? 1 : .01)
                 if (hasUpgrade("jac", 251)) eff = eff.mul(buyableEffect("jac", 111).mul(buyableEffect("jac", 112)).pow(0.02))
                 if (hasUpgrade("jac", 252)) eff = eff.mul(buyableEffect("jac", 131).pow(10))
                 if (hasUpgrade("jac", 253)) eff = eff.mul(buyableEffect("jac", 101).pow(0.02))
                 if (hasUpgrade("jac", 254)) eff = eff.mul(buyableEffect("jac", 122).pp ? buyableEffect("jac", 122).pp.pow(0.1) : 1)
-                return softcap(eff, EN("e40000"), hasUpgrade("aar", 122) ? 1 : 0.1).min("e1000000")
+                return softcap(eff, EN("e40234444444444444442342342342342342342342342344444444444000"), hasUpgrade("aar", 122) ? 1 : 0.1).min("e1000023423423423423423423423423423423423423423423423423423423423423400")
             },
             effectDisplay() { return "×" + format(this.effect()) },
             unlocked() { return hasUpgrade("jac", 102) },
