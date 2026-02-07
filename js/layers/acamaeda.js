@@ -100,7 +100,7 @@ addLayer("aca", {
 
     effect() {
         let eff = {
-            candyGain: EN(1e12013),
+            candyGain: EN(1678678678678678678678678678678678678678678678678678678678678678678678678678678),
             genMult: EN.pow(2, player.aca.candies.mul(player.aca.candiesEaten).pow(8)),
             pointMult: EN.pent(10, player.aca.compPoints.add(1).log(10).pow(4)),
             maxHealth: player.aca.candiesEaten.div(10).pow(5).add(100).floor(),
