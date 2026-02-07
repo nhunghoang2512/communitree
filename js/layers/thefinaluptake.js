@@ -206,7 +206,7 @@ addLayer("tfu", {
             },
             effect() {
                 let x = player[this.layer].buyables[this.id].add(buyableEffect("tfu", 105)).add(buyableEffect(this.layer, +this.id + 10)).add(tmp.tfu.effect.coalBonus)
-                let eff = EN.pow(x, x)
+                let eff = EN.pow(10, x)
                 return eff
             },
             cost() {
@@ -242,7 +242,7 @@ addLayer("tfu", {
             },
             effect() {
                 let x = player[this.layer].buyables[this.id].add(buyableEffect("tfu", 105)).add(buyableEffect(this.layer, +this.id + 10)).add(tmp.tfu.effect.coalBonus)
-                let eff = EN.pow(x, x)
+                let eff = EN.pow(10, x)
                 return eff
             },
             cost() {
