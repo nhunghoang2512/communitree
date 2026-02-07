@@ -206,12 +206,12 @@ addLayer("tfu", {
             },
             effect() {
                 let x = player[this.layer].buyables[this.id].add(buyableEffect("tfu", 105)).add(buyableEffect(this.layer, +this.id + 10)).add(tmp.tfu.effect.coalBonus)
-                let eff = EN.pow(2, x)
+                let eff = EN.pow(x, x)
                 return eff
             },
             cost() {
                 let x = softcap(player[this.layer].buyables[this.id], EN(15), 2)
-                return EN.pow(3, x).mul(250)
+                return EN.pow(2, x).mul(250)
             },
             canAfford() {
                 let data = tmp[this.layer].buyables[this.id]
@@ -242,7 +242,7 @@ addLayer("tfu", {
             },
             effect() {
                 let x = player[this.layer].buyables[this.id].add(buyableEffect("tfu", 105)).add(buyableEffect(this.layer, +this.id + 10)).add(tmp.tfu.effect.coalBonus)
-                let eff = EN.pow(1.5, x)
+                let eff = EN.pow(x, x)
                 return eff
             },
             cost() {
